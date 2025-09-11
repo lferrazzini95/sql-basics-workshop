@@ -7,6 +7,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/f4z3r/vault-workshop)
 ![GitHub Release](https://img.shields.io/github/v/release/f4z3r/vault-workshop)
 ![GitHub License](https://img.shields.io/github/license/f4z3r/vault-workshop)
+</div>
 
 Welcome to the **SQL Basics Workshop** at IPT!  
 SQL (Structured Query Language) is the standard language for working with relational databases—the backbone of modern apps, from social networks to inventory systems.
@@ -52,19 +53,28 @@ If you already have **Docker** and **Docker Compose** installed, you can skip De
    ```
 
 ---
+### 🌐 Accessing the Database
 
-## 🌐 Accessing the Database
-
-Once the containers are running, go to:
+Once the containers are running, navigate to:
 
 👉 [http://localhost:8080](http://localhost:8080)
 
-Login credentials for **pgAdmin**:
+Use the following credentials for **pgAdmin**:
 
-- **Email**: `admin@sqlbasics.ch`  
-- **Password**: `relational`
+* **Email**: `admin@sqlbasics.ch`
+* **Password**: `relational`
 
-You’ll see a pre-configured PostgreSQL server and a `workshop` database ready for action.
+In pgAdmin, right-click on **Servers** and choose **Register** -> **Server...**. Then, enter the following details:
+
+* **General Tab**
+    * **Name:** `workshop-cluster`
+* **Connection Tab**
+    * **Hostname/address:** `db`
+    * **Database:** `workshop`
+    * **Username:** `postgres`
+    * **Password:** `relational`
+
+Now you are ready for action!
 
 ---
 
