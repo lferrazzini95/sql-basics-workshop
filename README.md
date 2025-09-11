@@ -4,9 +4,9 @@
 
 # SQL Basics Workshop @ IPT
 
-![GitHub last commit](https://img.shields.io/github/last-commit/iptch/sql-basic-workshop)
-![GitHub Release](https://img.shields.io/github/v/release/iptch/sql-basic-workshop)
-![GitHub License](https://img.shields.io/github/license/iptch/sql-basic-workshop)
+![GitHub last commit](https://img.shields.io/github/last-commit/f4z3r/vault-workshop)
+![GitHub Release](https://img.shields.io/github/v/release/f4z3r/vault-workshop)
+![GitHub License](https://img.shields.io/github/license/f4z3r/vault-workshop)
 
 </div>
 
