@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 # Exercise 3: Security
+=======
+# Exercise 2: Performance and Indexing
+>>>>>>> b2d880d (feat: add exercise skeletons)
 
 ## Topics
 
 Draft (LFE):
+<<<<<<< HEAD
 * User Creation
 * Permissions/Grants
 * Views as a Security Tool
@@ -108,3 +113,9 @@ USING (amount > 100);
 ```
 
 **Note:** Row Level Security is complex to set up but provides the highest level of security assurance, as the filtering logic is enforced by the database engine itself, regardless of the application's code.
+=======
+* Permissions/Grants
+* Views
+* User Creation
+* Row Level Security/ Column Priviledges
+>>>>>>> b2d880d (feat: add exercise skeletons)
