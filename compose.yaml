@@ -1,12 +1,16 @@
 services:
   administration:
-    image: dpage/pgadmin4:9.6.0
+    image: dpage/pgadmin4:9.8.0
     restart: always
     container_name: pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@sqlbasics.ch
       - PGADMIN_DEFAULT_PASSWORD=relational
       - CHECK_EMAIL_DELIVERABILITY=false
+      - PGADMIN_CONFIG_SERVER_MODE=True
+      - PGADMIN_SERVER_JSON_FILE=/pgadmin4/servers.json
+    volumes:
+      - ./resources/servers.json:/pgadmin4/servers.json
     ports:
       - "80:80"
     links:
