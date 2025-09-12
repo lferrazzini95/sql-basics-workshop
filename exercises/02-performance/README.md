@@ -10,11 +10,6 @@
 
 The **Query Analyzer** is your most essential tool for performance tuning. It allows you to peak into the database engine and see exactly how a query is being executed. In PostgreSQL, the primary command for this is **`EXPLAIN ANALYZE`** which actually contains two parts:
 
-* **`EXPLAIN`**: Shows the **query plan**—the sequence of steps the database planner intends to take.
-* **`ANALYZE`**: Executes the query and records the **actual runtime statistics**, including actual execution time, rows processed, and time spent on each step.
-
-Understanding the output is key to identifying bottlenecks, such as slow **Sequential Scans** (reading the entire table), expensive **Hash Joins**, or redundant computation. This is the first step in analyzing slow running queries.
-
 #### Analyze the Query Plan
 
 Use the `EXPLAIN ANALYZE` command to inspect the plan and execution time of a specific query this way we can get familiar with it. For example, try to find the number of orders the Customer with the FirstName 'Emilio', and LastName 'Alvaro' completed. And check the EXPLAIN

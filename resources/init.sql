@@ -3,7 +3,6 @@
 \c workshop
 
 BEGIN;
--- Create a table for customers if it does not already exist.
 CREATE TABLE IF NOT EXISTS customers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -11,13 +10,6 @@ CREATE TABLE IF NOT EXISTS customers (
   registration_date DATE NOT NULL
 );
 
--- Create an index on the email column to speed up queries,
--- especially for lookups or JOINs on the email address.
-CREATE INDEX IF NOT EXISTS idx_customers_email ON customers(email);
-
--- Use a PL/pgSQL block to conditionally insert data.
--- This makes the script idempotent for data population. It checks if the
--- table is empty before generating the 100,000 customer records.
 DO $$
   DECLARE
     i INT;
