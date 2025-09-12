@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="./assets/img/postgres-logo.png" alt="Sql Basics" width="25%">
+<img src="./assets/img/postgres-logo.png" alt="SQL Basics" width="25%" />
 
 # SQL Basics Workshop @ IPT
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/f4z3r/vault-workshop)
 ![GitHub Release](https://img.shields.io/github/v/release/f4z3r/vault-workshop)
 ![GitHub License](https://img.shields.io/github/license/f4z3r/vault-workshop)
-</div>
 
 </div>
+
 
 ---
 
