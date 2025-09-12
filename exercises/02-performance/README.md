@@ -1,5 +1,16 @@
 # Exercise 2: Performance and Indexing
 
+## Topics
+
+Draft:
+* Indexing (LFE)
+* Materialized Views (LFE)
+* Query Analyzer (LFE)
+* Join Optimization (MFE)
+* Statistics (MFE)
+* Partitioning (MFE)
+
+
 In this exercise, we will explore the impact of database indexes on query performance. We will use the `customers` table, which has been populated with a large number of records.
 
 ## Instructions
@@ -12,11 +23,11 @@ In this exercise, we will explore the impact of database indexes on query perfor
     EXPLAIN ANALYZE SELECT * FROM customers WHERE email = 'customer50000@example.com';
     ```
 
-2.  **Drop the index:**
-    -   The `email` column has an index on it. Let's drop it to see what happens.
+2.  **Create the index:**
+    -   The `email` column has no index on it. Let's create it to see what happens.
 
     ```sql
-    DROP INDEX idx_customers_email;
+    CREATE INDEX idx_customers_email ON customers(email);
     ```
 
 3.  **Re-run the query:**
@@ -28,10 +39,3 @@ In this exercise, we will explore the impact of database indexes on query perfor
 
 4.  **Compare the results:**
     -   Compare the execution times and query plans from steps 1 and 3. You should see a significant difference in performance.
-
-5.  **Recreate the index:**
-    -   To restore the performance, let's recreate the index.
-
-    ```sql
-    CREATE INDEX idx_customers_email ON customers(email);
-    ```
