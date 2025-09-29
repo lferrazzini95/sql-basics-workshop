@@ -104,9 +104,10 @@ In this exercise, we will create a customers and orders table. We'll then demons
 
 #### Analyze the initial query performance
 
-We'll run a query that calculates the total sales for each customer. On large tables, this query can be slow due to the JOIN and GROUP BY operations. Use EXPLAIN ANALYZE to see the cost.
+Try to come up with a query that calculates the total sales for each customer. On large tables, this query can be slow due to the JOIN and GROUP BY operations. Use EXPLAIN ANALYZE to see the cost.
 
-SQL
+<details>
+    <summary>Solution</summary>
 
 ```sql
 EXPLAIN ANALYZE
@@ -116,6 +117,9 @@ JOIN orders o ON c.id = o.customer_id
 GROUP BY c.name
 ORDER BY SUM(o.amount) DESC;
 ```
+<<<<<<< HEAD
+=======
+</details>
 
 #### Create Materialized View
 
@@ -145,7 +149,7 @@ Add some records to the order table:
 INSERT INTO orders (id, customer_id, amount) VALUES (1000000, 1, 50.00); 
 ```
 
-Now refresh the materialized view and check the additional time it takes to better get a feeling for the tradeoff materialized views introduce:
+Refresh the materialized view and check the additional time it takes to better get a feeling for the tradeoff materialized views introduce:
 
 ```sql
 REFRESH MATERIALIZED VIEW customer_sales_mv;
