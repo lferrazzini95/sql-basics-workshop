@@ -1,3 +1,10 @@
+/*
+This database setup code is based on the Microsoft SQL Server Sample Code.
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the MIT License.
+Full license text available in the ATTRIBUTION.md file in the repository root.
+*/
 -- workshop_setup.sql
 -- This script sets up the 'workshop' database schema and populates it with sample data.
 \c workshop
