@@ -10,6 +10,7 @@
 
 </div>
 
+
 ---
 
 ## Overview
@@ -64,6 +65,7 @@ Now you're ready for action!
 ---
 
 ## Workshop Structure
+---
 
 All exercises are in the `exercises/` folder, organized into three sections:
 
@@ -74,7 +76,7 @@ All exercises are in the `exercises/` folder, organized into three sections:
 Each section includes:
 
 - A `README.md` with instructions
-- A `solution.sql` file to check your work or get unstuck
+- The `README.md` file also includes solutions. If possible only reveal them if you are stuck or want to compare to your own solution.
 
 ---
 
