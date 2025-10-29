@@ -1,0 +1,30 @@
+services:
+  administration:
+    image: dpage/pgadmin4:9.9.0
+    restart: always
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@sqlbasics.ch
+      - PGADMIN_DEFAULT_PASSWORD=relational
+      - CHECK_EMAIL_DELIVERABILITY=false
+      - PGADMIN_CONFIG_SERVER_MODE=True
+      - PGADMIN_SERVER_JSON_FILE=/pgadmin4/servers.json
+    volumes:
+      - ./resources/servers.json:/pgadmin4/servers.json
+    ports:
+      - "80:80"
+    links:
+      - "db:database"
+  db:
+    image: postgres:17.5
+    restart: always
+    shm_size: 128mb
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=relational
+      - POSTGRES_DB=workshop
+    volumes:
+      - ./resources/db-setup:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
